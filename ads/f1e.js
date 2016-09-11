@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+ * Copyright 2016 The AMP HTML Authors. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +21,7 @@ import {writeScript, validateSrcPrefix} from '../src/3p';
  * @param {!Object} data
  */
 export function f1e(global, data) {
-  checkData(data, ['domain', 'target']);
-  var domain = data.domain;
-  var target = data.target;
-  validateSrcPrefix('https:', domain);
-  var rnd = Math.round(Math.random() * 100000000);
-  if (!pid) var pid = Math.round(Math.random() * 100000000);
-  var url = domain + '/jserver/acc_random=' + rnd + target + '/pageid=' + pid;
-  writeScript(global, url)
+  validateSrcPrefix('https:', data.url);
+  global.f1e_data = data;
+  writeScript(global, "https://img.ak.impact-ad.jp/util/f1e_amp.min.js");
 }
