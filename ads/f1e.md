@@ -1,5 +1,5 @@
 <!---
-Copyright 2015 The AMP HTML Authors. All Rights Reserved.
+Copyright 2016 The AMP HTML Authors. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -21,14 +21,14 @@ limitations under the License.
 ```html
 <amp-ad width=300 height=250
     type="f1e"
-    data-domain="https://demo.impact-ad.jp"
+    data-url="https://demo.impact-ad.jp"
     data-target="/SITE=AMPSITE/AREA=AMPAREA/AAMSZ=300X250/OENCJP=UTF8" >
 </amp-ad>
 ```
 
 ## Configuration
 
-
 Supported parameters:
 
-- data-domain must start with `https:`
+- `data-url` - Must start with "https:"
+- `data-target`
